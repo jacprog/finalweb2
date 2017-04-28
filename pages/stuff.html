@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!--
+	Name: Jacques Favre
+    Date: April 8 23 2017
+    Class: CGS1821.051
+    Assignment: Week Last 
+    Language: HTML 5
+    Purpose: Final Project
+    Adding JavaScript and Jquery function
+    Includes: CSS style sheet, normalize CSS, slicknav CSS, JS folder    favicon_cgs1821_p.ico
+    page_title_cgs1821_p.png
+    jaf4-3_cgs1821_p.jpg
+    jquery slideshow on this page
+    Lightbox images display on dior page
+    Form with validation on contact page
+
+Parallax Slider- (c) Dynamic Drive (www.dynamicdrive.com)
+Please keep this notice intact
+Visit http://www.dynamicdrive.com/ for this script and 100s more.
+http://www.dynamicdrive.com/dynamicindex17/parallaxslider/index.htm
+http://www.dynamicdrive.com/notice.htm
+
+	
+	-->
+	
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Jacques Favre Home Portfolio</title>
+	<link rel="shortcut icon" href="images/favicon_cgs1821_p.ico">
+<!-- 	<link rel="stylesheet" href="styles/normalize.css"> -->
+	<link rel="stylesheet" href="../styles/jacques_favre_cgs1821_f.css">	
+<!--Add on for mobile menu -->
+
+<!-- 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+  	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+ 	 crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  	integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  	crossorigin="anonymous"></script> -->
+<!--     <script src="js/jquery.slicknav.min.js"></script>
+   	<script type="text/javascript">
+    	$(document).ready(function(){
+			$('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+    	});    	
+    </script> -->
+    
+<!-- add on for slide show     -->
+<!--         <script src="js/malsupslideshow.js"></script> -->
+        
+        
+        
+       <script src="../js/jquery.velocity.min.js"></script> 
+     <script type="text/javascript" src="../js/jquery.touchSwipe.min.js"></script>   
+    <script src="../js/parallaxslider.js" type="text/javascript"></script>
+<!-- script mobile menu -->
+
+
+
+ <script type="text/javascript">
+
+var firstparallaxslider=new parallaxSlider({
+wrapperid: 'myparallaxslider', //ID of DIV on page to house slider
+displaymode: {type:'manual', pause:3000, cycles:2, stoponclick:true, pauseonmouseover:true},
+delaybtwdesc: 500, // delay in milliseconds between the revealing of each description layer inside a slide
+navbuttons: ['../images/left.png', '../images/right.png'], // path to nav images
+activeslideclass: 'selectedslide', // CSS class that gets added to currently shown DIV slide
+orientation: 'h', //Valid values: "h" or "v"
+persist: true, //remember last viewed slide and recall within same session?
+slideduration: 1000 //transition duration (milliseconds)
+});
+
+</script>   
+    
+</head>
+
+<body>
+</div>
+<main>
+
+
+<div id="myparallaxslider" class="parallaxslider">
+
+<div class="slide">
+<div class="bgoverlay" data-bgimage="../images/draftandrain_cgs1821_p.jpg"></div>
+<div class="desc"><h1>We live in a great time!</h1></div>
+<div class="desc">
+<div style="position:absolute; bottom:15px; left:30px; width:250px; background:black; font:normal 105% Germand; padding:10px; font-style:italic; border-radius:10px; line-height:1.4em;">
+&#8220;I like learning, I have alway been very interested in technology and I have been thinking about the best way to present and share some of my knowledge and a few of the projects I have done. 
+</div>
+</div>
+</div>
+
+<div class="slide">
+<div class="bgoverlay" data-bgimage="../images/jaf4-3_cgs1821_p.jpg"></div>
+<div class="desc">
+<div style="position:absolute; width:150px; right:10px; line-height:1.5em; background:#E2AF16; padding:10px; border-radius:7px">&#8220;This is the purpose of this custom web site. I have learned along the way just like many of the other projects I have been working on.
+</div>
+</div>
+<div class="desc">
+<div style="position:absolute; bottom:1em">Cally Lily is a perennial plant, evergreen where rainfall and temperatures are adequate. -Wikipedia
+</div>
+</div>
+</div>
+
+<div class="slide">
+<div class="bgoverlay" data-bgimage="leaf.jpg"></div>
+<div class="desc">
+<div style="position:absolute; top:30%; background:#754B08; font:normal 100% Germand; padding:20px; margin: 0 15%; font-style:italic; border-radius:10px">
+&#8220;Never before has information been so accessible.
+					Technology enables everyone to quickly become masters of the topic of their choice.<br>
+					Together we can exchange, imagine and build as never before,
+					Everyone can learn, create, realize and distribute their masterpieces.<br>
+					<h3>Let's go create together!</h3>
+		
+				<p><a href="mailto:jacqueshfavre@gmail.com?&subject=Jacques%20Favre%20Portfolio"><strong>Email me</strong></a> with questions or comments.</p>
+</div>
+</div>
+</div>
+
+
+</div>
+
+
+
+   
+
+
+</main>
+</body>
+</html>

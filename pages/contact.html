@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<!--
+	Name: Jacques Favre
+    Date: April 19 23 2017
+    Class: CGS1821.051
+    Assignment: FINAL PROJECT
+    Language: HTML 5
+    Purpose: Final Project, putting all togheter
+    Adding JavaScript and Jquery function
+    Includes: CSS style sheet, normalize CSS, JS folder, favicon_cgs1821_p.ico	-->
+	
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Jacques Favre Contact Form</title>
+	<link rel="shortcut icon" href="../images/favicon_cgs1821_p.ico">
+	<link rel="stylesheet" href="../styles/jacques_favre_cgs1821_f.css">	
+<!-- 	style for slider -->
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+  	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+ 	 crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  	integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  	crossorigin="anonymous"></script>
+  	
+<!-- slider script  	 -->
+     <script src="../js/mySlider.js"></script>
+<!-- all fields have input -->
+    <script src="../js/myformValidation.js"></script>
+<!-- on change input valid -->
+    <script src="../js/redexOnChangeValid.js"></script>
+  
+</head>
+<body>
+	<header>
+					<nav id="mobilemenu">
+						<ul>
+        						<li><a href="">MENU</a>
+        							<ul>
+        								<li><a href="../index.html">Home</a></li>
+        								<li><a href="../pages/contact.html">Contact</a></li>        				
+        								<li><a href="../pages/cv.html">CV</a></li>
+                    					<li><a href="../pages/projects.html">Projects</a></li>
+                    					<li><a href="../pages/jaf.html">Jaf</a></li>
+                						<li><a href="../pages/velo.html">Bikes</a></li>
+                						<li><a href="../pages/dior.html">Dior</a></li>
+                						<li><a href="../pages/it.html">Jacques</a></li>
+        							</ul>
+        					</li>
+    					</ul>
+				</nav>
+			<h2><a href="../index.html">Jacques Favre Portfolio</a></h2>
+				<nav id="nav_menu">
+    				<ul>
+        				<li><a href="../index.html">Home</a></li>
+        				<li><a href="../pages/cv.html">CV</a></li>
+        				<li><a href="../pages/projects.html">Projects</a>
+        					<ul>
+            					<li><a href="../pages/projects.html">Projects list</a></li>
+                				<li><a href="../pages/jaf.html">Jaf</a></li>
+                				<li><a href="../pages/velo.html">Bikes</a></li>
+                				<li><a href="../pages/dior.html">Dior</a></li>
+                				<li><a href="../pages/it.html">Jacques</a></li>
+        					</ul>
+        				</li>
+            		<li><a href="../pages/contact.html">Contact</a></li>
+    			</ul>
+			</nav>
+	</header>
+
+<main>
+	<h1>Contact Page</h1>
+		<div>				
+			<aside>				
+				 <div id="slideshow">
+	 				<ul>
+        				<li>
+           					 <img src="../images/Smartphone.png" alt="">
+        				</li>
+       					 <li>
+            					<img src="../images/Computer-icon.png" alt="">
+        				</li>
+        				<li>
+            					<img src="../images/Smartphone.png" alt="">
+        				</li>
+        				<li>
+            					<img src="../images/Computer-icon.png" alt="">
+       					</li>
+         				<li>
+           						 <img src="../images/Smartphone.png" alt="">
+        				</li>
+     				</ul>
+        		</div>      
+			</aside>
+    			<p id="moveright">The IT world is a world of options. There are many ways to do things and many tools to use. You might want to copy and paste an email on a laptop and use an online email account. On a mobile device, it is easy to click on a link to open the mail app. Other’s might want to make a phone call or send a text. The options are unlimited. </p>		
+    		<h3 id="contact">Here are are ways to get in touch</h3>
+    			<ul>
+    				<li><div id="nopadding"><a href="mailto:jacqueshfavre@gmail.com?&subject=Jacques%20Favre%20Portfolio"><strong>Email me</strong></a> with questions or comments</div></li>
+   					<li><strong>Call:</strong> 352-208-3526</li>
+   					<li><strong>Use this email:</strong> jacqueshfavre@gmail.com</li>
+   					<li><strong>Or use this contact form:</strong></li>	
+				</ul>
+			</div>
+		<div id="form">
+			<h2>Contact Form</h2>
+				<div id="validForm">
+					<form action="info.html" method="get" name="info" id="formInfo">
+                      <div class="info">                   
+                        <fieldset>
+                            	<legend>Contact information</legend><br>                                
+                            	<label for="Fname">First name</label>
+                                 <input id="Fname" type="text" name="Fname" onChange="validateText(this)">
+                                 <span id ="Fname_error">*</span><br><br>
+                                 <label for="Lname">Last name</label>
+                                 <input id="Lname" type="text" name="Lname" onChange="validateText(this)">
+                                 <span id ="Lname_error">*</span><br><br>                                 
+                                 <label>Email</label>
+                                 <input id="email" type="email" name="emailAddie" onChange="validateEmail()">
+                                 <span id="email_error">*</span><br><br>                                 
+                                 <label>URL</label>
+                                 <input id="url" type="url" name="url" 
+                                 onChange="validateUrl()">
+                                 <span id="url_error">*</span><br><br>                                 
+                                 <label>Adress</label>
+                                <input type="text" id="mailAddie" name="mailAddie"><br><br>
+                                <label>City</label>
+                                <input id="city" type="text" name="City" onChange="validateText(this)">
+                                <span id="city_error">*</span><br><br>                                
+                                <label>State</label>&nbsp;&nbsp;&nbsp;<select id="state" name="State">
+										<option value="">Choose an option&nbsp;&nbsp;&nbsp;&nbsp;</option>
+    									<option value="AL">AL</option>
+    									<option value="CA">CA</option>
+    									<option value="FL">FL</option>
+    									<option value="NY">NY</option>
+    									<option value="Other46">Other 46</option>
+  									</select>
+  									<span id="state_error">*</span><br><br>                                
+  									<label>Zip</label>
+                                <input id="zip" type="text" name="Zip" onChange="validateZip()">
+                                <span id="zip_error">*</span><br><br>                                
+                                <label>Phone</label>
+                                <input id="phone" type="tel" name="phoneNum" onChange="validatePhone()" ><br>
+                            </fieldset>
+                        </div>
+                        <div class="order"> 
+                            <fieldset>
+                                <legend>Requests</legend><br>
+                                    <label>Comments</label>
+                                      <textarea name="message" rows="3" cols="19"></textarea><br><br>
+                                    <label>Contact Me</label>
+                                    <input type="radio" name="contact_me" value="byEmail"> By Email<br>
+                                    <label id="hide1">Contat Me</label>
+                                    <input type="radio" name="contact_me" value="byPhone"> By Phone<br>
+                                    <label id="hide2">Contact Me</label>
+                                    <input type="radio" name="contact_me" value="byEmailOrPhone"> Email or Phone <br>
+                                    <label id="hide3">Contat Me</label>
+                                    <input type="radio" name="contact_me" value="no"> Do Not Contact<br><br>
+                                   <label class="long">How did you hear about me?</label>&nbsp;
+                                    <select name="How did you learn">
+                                     <option value="byEmail">This Website</option>
+                                    <option value="byPhone">By Reference</option>
+                                    <option value="byBoth">Work application</option>
+                                    <option value="no">Other</option>
+                                    </select><br><br>                               
+                       <div id="wrapperslide">
+                                       <p id="smaller">How would you rate this Site: 1 for bad, 10 for Awesome:</p><br>
+                                        <label for="rating">Rating:</label>
+                                        <input type="text" id="rating">
+                                        <div id="sliderVisual"></div>
+                       </div>
+                                <div class="button">
+                                <input id="joinFormInfo" type="button" value="SUBMIT FORM">
+                                   <br><br>
+                                  </div> 
+                                    <input id="reset" type="reset">
+                        </fieldset>
+                      </div>
+                </form>
+</div>		
+</div>
+<div id="oneem"></div>					
+	</main>
+	<footer>
+	<p>
+	<a href="../pages/termsAndPrivacy.html">Terms and Privacy</a>&nbsp;&nbsp;&copy; 2017	Jacques Favre ajfavre.com</p>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+	Name: Jacques Favre
+    Date: April 19 23 2017
+    Class: CGS1821.051
+    Assignment: FINAL PROJECT
+    Language: HTML 5
+    Purpose: Final Project, putting all togheter
+    Adding JavaScript and Jquery function
+    Includes: CSS style sheet, normalize CSS, JS folder, favicon_cgs1821_p.ico	-->	
+	<head>
+		<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Jacques Favre IT </title>
+	<link rel="shortcut icon" href="../images/favicon_cgs1821_p.ico">
+	<link rel="stylesheet" href="../styles/jacques_favre_cgs1821_f.css">	
+<!-- 	style for accordion -->
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+  	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+ 	 crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  	integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  	crossorigin="anonymous"></script>
+
+<!--     accordion -->
+    <script type="text/javascript"> 
+						 $(document).ready(function() {   
+						 			$('#accordion').accordion({ active: false, collapsible: true, heightStyle: "content", });  
+						 }); 
+				</script>
+</head>
+
+<body>
+	<header>
+					<nav id="mobilemenu">
+						<ul>
+        						<li><a href="">MENU</a>
+        							<ul>
+        								<li><a href="../index.html">Home</a></li>
+        								<li><a href="../pages/contact.html">Contact</a></li>        				
+        								<li><a href="../pages/cv.html">CV</a></li>
+                    					<li><a href="../pages/projects.html">Projects</a></li>
+                    					<li><a href="../pages/jaf.html">Jaf</a></li>
+                						<li><a href="../pages/velo.html">Bikes</a></li>
+                						<li><a href="../pages/dior.html">Dior</a></li>
+                						<li><a href="../pages/it.html">Jacques</a></li>
+        							</ul>
+        					</li>
+    					</ul>
+				</nav>
+			<h2><a href="../index.html">Jacques Favre Portfolio</a></h2>
+				<nav id="nav_menu">
+    				<ul>
+        				<li><a href="../index.html">Home</a></li>
+        				<li><a href="../pages/cv.html">CV</a></li>
+        				<li><a href="../pages/projects.html">Projects</a>
+        					<ul>
+            					<li><a href="../pages/projects.html">Projects list</a></li>
+                				<li><a href="../pages/jaf.html">Jaf</a></li>
+                				<li><a href="../pages/velo.html">Bikes</a></li>
+                				<li><a href="../pages/dior.html">Dior</a></li>
+                				<li><a href="../pages/it.html">Jacques</a></li>
+        					</ul>
+        				</li>
+            		<li><a href="../pages/contact.html">Contact</a></li>
+    			</ul>
+			</nav>
+	</header>
+
+<main>
+
+		
+		<h1>Becoming a programmer - Jacques</h1>
+
+				<img src="../images/diorandilarge.jpg" alt="Me and Dior">
+
+    			<p>While studying horsemanship in the US, I become involved with producing web-based educational materials for a company leading the digital horsemanship community. The training company was very progressive using IT processes throughout most of their business. I was hooked and hungry to learn more. <br>I am now back in school at Santa Fe College to study.</p>
+    			
+    			
+    	
+	
+		
+			<h2 id="clearpic">Important design feature while building this web site</h2>
+		
+    	
+<div id="accordion">
+							<h3 class="accordion-title">Responsive design</h3>
+							<div>
+							<p class="accordion-content">The site will adjust to the size of the screen. There is a desktop version and a mobile version.
+							</p>
+							</div>
+							<h3 class="accordion-title">Menu</h3>							
+							<div>
+							<p class="accordion-content">The horizontal menu switches to a vertical menu on a small screen utilizing HTML 5 and CSS 3.</p>
+							</div>
+							<h3 class="accordion-title">Parallax</h3> 							
+							<div>
+							<p class="accordion-content">On the Index page, three images slide across the screen and comments slide with a delay. Animation is achieved using jQuery by Dynamicdrive.com</p>
+							</div>
+							<h3 class="accordion-title">Image rollover</h3> 							
+							<div>
+							<p class="accordion-content">On the Jaf page, images switch when you hover over a picture on the desktop view, and switch on touch when using a touch screen.</p>
+							</div>
+							<h3 class="accordion-title">Carousel</h3>
+							<div>
+							<p class="accordion-content">On the bikes page, a carousel  is powered by JQuerry. The contact page carouseli s powered by a more basic HTML coding.</p>
+							</div>
+							<h3 class="accordion-title">Light box</h3>							
+							<div>
+							<p class="accordion-content">On the Dior page, a five image JQuerry Lightbox swap is used. The thumbnails are resized to ensure they are inline regardless of screen size.</p>
+							</div>
+							<h3 class="accordion-title">Forms</h3> 							
+							<div>
+							<p class="accordion-content">On the contact page, the form uses JavaScript, and JQuery validations. And a google form<a href="../pages/altcontact.html"> HERE</a> that is active.</p>
+							</div>
+							<h3 class="accordion-title">Accordion</h3> 							
+							<div>
+							<p class="accordion-content">The Jacques page uses an accordion to display a list of facts about this site.</p>
+							</div>
+							<h3 class="accordion-title">Links</h3> 							
+							<div>
+							<p class="accordion-content">The size of some of the links was increased and displayed in blue on the mobile screen size to make it easier to use on small touch screens.</p>
+							</div>
+							<h3 class="accordion-title">More</h3> 							
+							<div>
+							<p class="accordion-content">On the Project page the Table is styled to fit on small screens. There are color effects as well as resizing of images and a change from one to two columns to adjust to different screen sizes. There is also a video on the Dior page. Last but not least, there is a live Google form <a href="../pages/altcontact.html">HERE</a>, in the event you want to give me feedback.</p>
+							</div>
+					</div>
+<div id="oneem"></div>
+
+</main>
+<footer>
+	<p>
+	<a href="../pages/termsAndPrivacy.html">Terms and Privacy</a>&nbsp;&nbsp;&copy; 2017	Jacques Favre ajfavre.com</p>
+</footer></body>
+</html>

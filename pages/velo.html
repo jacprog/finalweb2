@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<!--
+	Name: Jacques Favre
+    Date: April 19 23 2017
+    Class: CGS1821.051
+    Assignment: FINAL PROJECT
+    Language: HTML 5
+    Purpose: Final Project, putting all togheter
+    Adding JavaScript and Jquery function
+    Includes: CSS style sheet, normalize CSS, JS folder, favicon_cgs1821_p.ico
+	-->	
+	
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Jacques Favre Bicycles</title>
+	<link rel="shortcut icon" href="../images/favicon_cgs1821_p.ico">
+	<link rel="stylesheet" href="../styles/jacques_favre_cgs1821_f.css">	
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+  	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+ 	 crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  	integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  	crossorigin="anonymous"></script>        
+  	<!-- add on for slide show     -->
+        <script src="../js/malsupslideshow.js"></script>
+
+</head>
+
+<body>
+	<header>
+					<nav id="mobilemenu">
+						<ul>
+        						<li><a href="">MENU</a>
+        							<ul>
+        								<li><a href="../index.html">Home</a></li>
+        								<li><a href="../pages/contact.html">Contact</a></li>        				
+        								<li><a href="../pages/cv.html">CV</a></li>
+                    					<li><a href="../pages/projects.html">Projects</a></li>
+                    					<li><a href="../pages/jaf.html">Jaf</a></li>
+                						<li><a href="../pages/velo.html">Bikes</a></li>
+                						<li><a href="../pages/dior.html">Dior</a></li>
+                						<li><a href="../pages/it.html">Jacques</a></li>
+        							</ul>
+        					</li>
+    					</ul>
+				</nav>
+			<h2><a href="../index.html">Jacques Favre Portfolio</a></h2>
+				<nav id="nav_menu">
+    				<ul>
+        				<li><a href="../index.html">Home</a></li>
+        				<li><a href="../pages/cv.html">CV</a></li>
+        				<li><a href="../pages/projects.html">Projects</a>
+        					<ul>
+            					<li><a href="../pages/projects.html">Projects list</a></li>
+                				<li><a href="../pages/jaf.html">Jaf</a></li>
+                				<li><a href="../pages/velo.html">Bikes</a></li>
+                				<li><a href="../pages/dior.html">Dior</a></li>
+                				<li><a href="../pages/it.html">Jacques</a></li>
+        					</ul>
+        				</li>
+            		<li><a href="../pages/contact.html">Contact</a></li>
+    			</ul>
+			</nav>
+	</header>
+
+
+<main>
+
+    	<h1>Biking around - A foldable bicycle</h1>
+
+						<div class="cycle-slideshow"
+	        data-cycle-fx="scrollHorz"
+		    data-cycle-timeout="1500"
+		    data-cycle-caption="#adv-custom-caption"
+		    data-cycle-caption-template="{{cycleTitle}}" >
+            <img src="../slidepics/velo1.jpg" alt="" data-cycle-title="Blue Bike">
+            <img src="../slidepics/velo2.jpg" alt="" data-cycle-title="Blue Bike">
+            <img src="../slidepics/velo3.jpg" alt="" data-cycle-title="Blue Bike">
+            <img src="../slidepics/velo4.jpg" alt="" data-cycle-title="Blue Bike">
+            <img src="../slidepics/velo5.jpg" alt="" data-cycle-title="Blue Bike">
+            <img src="../slidepics/velo6.jpg" alt="" data-cycle-title="Blue Bike">
+            <img src="../slidepics/velo7.jpg" alt="" data-cycle-title="Red Bike">
+            <img src="../slidepics/velo8.jpg" alt="" data-cycle-title="Red Bike">
+            <img src="../slidepics/velo9.jpg" alt="" data-cycle-title="Red Bike">
+            <img src="../slidepics/velo10.jpg" alt="" data-cycle-title="Red Bike">
+
+            <!-- empty element for caption -->
+			<div id="adv-custom-caption"></div>
+        </div>      
+
+						<p>A bicycle is great for short distance travel. But what do you do when you are not using it?<br>Bikes are big, take a lot of room to store and are bulky to carry around.</p>
+						<p>The answer? A bike that when folded, can be carried and stored like a suitcase. These days it could have electric power as well.</p>
+						<p>Here are two that I have built!
+</main>
+<footer>
+	<p>
+	<a href="../pages/termsAndPrivacy.html">Terms and Privacy</a>&nbsp;&nbsp;&copy; 2017	Jacques Favre ajfavre.com</p>
+</footer></body>
+</html>

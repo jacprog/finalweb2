@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<!--
+	Name: Jacques Favre
+    Date: April 19 23 2017
+    Class: CGS1821.051
+    Assignment: FINAL PROJECT
+    Language: HTML 5
+    Purpose: Final Project, putting all togheter
+    Adding JavaScript and Jquery function
+    Includes: CSS style sheet, normalize CSS, JS folder, favicon_cgs1821_p.ico
+    Lightbox images display on dior page
+    Form with validation on contact page
+	-->
+	
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Jacques Favre Home Portfolio</title>
+	<link rel="shortcut icon" href="../images/favicon_cgs1821_p.ico">
+	<link rel="stylesheet" href="../styles/jacques_favre_cgs1821_f.css">	
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+  	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+ 	 crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  	integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  	crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<header>
+					<nav id="mobilemenu">
+						<ul>
+        						<li><a href="">MENU</a>
+        							<ul>
+        								<li><a href="../index.html">Home</a></li>
+        								<li><a href="../pages/contact.html">Contact</a></li>        				
+        								<li><a href="../pages/cv.html">CV</a></li>
+                    					<li><a href="../pages/projects.html">Projects</a></li>
+                    					<li><a href="../pages/jaf.html">Jaf</a></li>
+                						<li><a href="../pages/velo.html">Bikes</a></li>
+                						<li><a href="../pages/dior.html">Dior</a></li>
+                						<li><a href="../pages/it.html">Jacques</a></li>
+        							</ul>
+        					</li>
+    					</ul>
+				</nav>
+			<h2><a href="../index.html">Jacques Favre Portfolio</a></h2>
+				<nav id="nav_menu">
+    				<ul>
+        				<li><a href="../index.html">Home</a></li>
+        				<li><a href="../pages/cv.html">CV</a></li>
+        				<li><a href="../pages/projects.html">Projects</a>
+        					<ul>
+            					<li><a href="../pages/projects.html">Projects list</a></li>
+                				<li><a href="../pages/jaf.html">Jaf</a></li>
+                				<li><a href="../pages/velo.html">Bikes</a></li>
+                				<li><a href="../pages/dior.html">Dior</a></li>
+                				<li><a href="../pages/it.html">Jacques</a></li>
+        					</ul>
+        				</li>
+            		<li><a href="../pages/contact.html">Contact</a></li>
+    			</ul>
+			</nav>
+	</header>
+
+<main>
+
+	
+	<h1 id="top">Projects</h1>
+
+	
+    	<figure>
+    	<figcaption>Projects List</figcaption>
+    	<table>
+
+			<thead>
+					<tr>
+						<th>Category</th>
+						<th>Link</th>									<!-- links to same page below -->
+						<th>Description</th>
+					</tr>
+			</thead>
+			<tbody>
+					<tr>
+						<td class="bolder">Vehicles</td>
+						<td class="bolder"><a href="#jaf">Jaf</a></td>
+						<td>Design and fabrication</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td class="bolder"><a href="#velo">Bicycles</a></td>
+						<td>Design and fabrication</td>
+					</tr>
+					<tr>
+						<td class="bolder">Communication</td>
+						<td class="bolder"><a href="#dior">Dior</a></td>
+						<td>Horsemanship and training</td>
+					</tr>
+					<tr>
+						<td class="bolder">IT</td>
+						<td class="bolder"><a href="#jacques">Jacques</a></td>
+						<td>IT design and technology</td>
+					</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan ="3"><a href="mailto:jacqueshfavre@gmail.com?&subject=Jacques%20Favre%20Portfolio"><strong>Email me</strong></a> with questions or comments</td>
+				</tr>
+			</tfoot>	
+		</table>
+		</figure>
+		
+		<h2>More details</h2>
+		
+<!-- id for 1 or 2 column in css -->
+		<article id="article2col"> 
+		
+<!-- id for link to table		 -->
+			<div class="colChange">
+					<h2 id="jaf"><a href="../pages/jaf.html">Jaf</a></h2>
+		
+						<img src="../images/jaf_front_cgs1821_p.jpg" alt="Jaf, front view in snow"> 
+    	
+					
+					<p>Many cars get discarded because of their age. However a lot of the mechanical parts, like axles and transmission, are still in good condition and could be reused.</p>
+					<p>Reused parts could be shipped to a developing countries and used to build utility vehicles. Here is a project I built using a recycled Toyota Tercel 4WD. I called it affectionately  the &ldquo;JAF&rdquo;.</p>
+					<p><a href="#top">Return to top</a></p>
+			</div>
+			<div class="colChange">		
+						<h2 id="velo"><a href="../pages/velo.html">Bicycles</a></h2>		
+						
+			<img src="../images/biking_cgs1821_p.jpg" alt="bicking in Gstaad"> 		
+					
+
+   					<p>A bicycle is great for short distance travel. But what do you do when you are not using it?<br>Bikes are big, take a lot of room to store and are bulky to carry around.</p>
+   					<p>The answer? A bike that when folded, can be carried and stored like a suitcase.<br>These days it could have electric power as well.</p>
+   					<p><a href="#top">Return to top</a></p>
+			</div>
+			<div class="colChange">   					
+   			    		<h2 id="dior"><a href="../pages/dior.html">Dior</a></h2>		
+   					
+   			<img src="../images/diordriving_cgs1821_p.jpg" alt="Driving Dior"> 		
+   					
+
+    				<p>Horses are one of my early passions. Back in the day, horses meant &ldquo;just&rdquo; riding. I liked it, however the riding-school was not very much fun.<br>
+    				Surfing the  internet, I learned about communication with horses based on a better understanding of the psychology of training.<br>So I moved to the US to learn about &ldquo;natural horsemanship&rdquo;.</p>
+    				<p><a href="#top">Return to top</a></p>
+    				
+    
+			</div>
+			<div class="colChange">    	
+    			
+    		    		<h2 id="jacques"><a href="../pages/it.html">Jacques</a></h2>		
+    				
+    		<img src="../images/ianddior_cgs1821_p.jpg" alt="Jaf at home"> 		
+    				
+
+     				<p>While studying horsemanship in the US, I become involved with producing web-based educational materials for a company leading the digital horsemanship community. The training company was very progressive using IT processes throughout most of their business. I was hooked and hungry to learn more. I am now back in school at Santa Fe College to study.</p>
+     				<p><a href="#top">Return to top</a></p>
+    	</div>		
+		</article> 
+
+
+</main>
+<footer>
+	<p>
+	<a href="../pages/termsAndPrivacy.html">Terms and Privacy</a>&nbsp;&nbsp;&copy; 2017	Jacques Favre ajfavre.com</p>
+	</footer>
+</body>
+</html>
