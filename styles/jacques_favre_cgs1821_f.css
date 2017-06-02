@@ -934,7 +934,11 @@ width: 25%;
 		tbody td:first-child {
 		display: none; 
 		}	
+#myparallaxslider { /* CSS for specific carousel container called #myparallaxslider. */
+width:100%;
+height:500px;
 
+}
 /* 	image above text and full width on project page in mobile device view			 */
 	article img {
 			max-width: 100%; 
