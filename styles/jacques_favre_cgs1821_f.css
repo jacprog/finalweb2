@@ -266,7 +266,7 @@ text-decoration:none;
 
 /* 	placement of p element next to image slide on contact page */
 		#moveright {
-		margin-left: 5em;
+		margin-left: 4em;
 	}
 	
 	/* slide show CONTACT PAGE*/
@@ -360,7 +360,7 @@ section {
 	
 	main p {
 		font-size: 120%;
-		padding:  .5em 0;
+		padding:  .5em 2.5%;
 	}
 	
 
@@ -491,7 +491,7 @@ main ol li ol {
 /* 	to align label, inputs, text area 3 sets of format */
 	form label {
 	float: left;
-	width: 6em;
+	width: 5em;
 	text-align: right;
 	}
 	form input, textarea { 
@@ -525,7 +525,7 @@ main ol li ol {
 	.long {
 		width: 14em;
 		text-align: left;
-		margin-left: 1.25em;
+		margin-left: .25em;
 }
 
 	
@@ -586,7 +586,7 @@ div.button {
 /* the wrapper, how the box will suround the video*/	
 	.Wrapper {
 		position: relative;
-		padding-bottom: 133%; 
+		padding-bottom: 130%; 
 		padding-top: 25px;
 		margin-bottom: 1%;
 		height: 0;
@@ -613,21 +613,32 @@ div.button {
 }
 /* Position and width of accordion,margin is in main */
 #accordion{  
-	width: 100%; 
+	width: 95%; 
 	overflow: hidden;      
 	box-shadow: 0px 1px 3px #000000;      
 	border-radius: 5px; 
+	margin: 0 2.5%;
+
 }
 /* style for content, text box displayed */
 	.ui-accordion .ui-accordion-content {  
  	background: #f5f2ef;		/*light gray	 */
-	font-family: Arial
+	font-family: Arial;
 	}
 	
+/* 	.accordion-title.active {
+		background: #f5f2ef;
+	} */
 	
+/* 	color text header open */
+/* 	.ui-state-active, .ui-state-focus {
+		border: 1px solid black;
+		color: 3282828;
+	} */
 
 /* color of title boxes at idle same as sides */
 	.ui-accordion .ui-accordion-header {
+/* 		background: #dce2ea;  */
 	background: #e6e6e6; 
 } 
 
@@ -723,7 +734,7 @@ footer p a {
 	} 
 }  
 
-/* mobile landscape to tablet portrait *********************************************************/
+/* mobile landscape to tablet portrait */
 @media only screen and (max-width: 769px) {
 
 
@@ -746,7 +757,7 @@ z-index: 9999;
 		display: block;
 /* 		height: .5em; */
 		position: absolute;
-		top: 6px;
+		top: 10px;
 		width: 25%;     /*more will cover link header*/
 	}
 /* and reformat mobile menu */
@@ -779,7 +790,7 @@ Float left to have the menu on the left side of page*/
 /* 		background-color: red;				 */
 		color: #dce2ea; /* text link color*/
 		font-weight: bold;
-		font-size: 75%;
+		font-size: 70%;
 		position: relative; 
 		z-index: 999;
 	}
@@ -835,7 +846,7 @@ margin-left: 0;
 /* 	resize Image to edge on mobile device*/
 	main img { 
 	margin: 2.5% 0 1.5em 0;
-	max-width: 100%; 
+	max-width: 95%; 
 	}
 	
 	/* make link email me bigger on small  touch screen  and blue to show link*/	
@@ -843,16 +854,6 @@ margin-left: 0;
 	font-size: 125%; 
 	color: blue;
 	} 
-	
-	main p {
-	font-size: 120%;
-	padding:  .5em 2.5%;
-	}
-/* 	placement of p element next to image slide on contact page */
-		#moveright {
-		margin-left: 4em;
-	}
-
 	
 	/* Shrink table on smaller screen*/
 	table {
@@ -863,25 +864,17 @@ margin-left: 0;
 	}
 	
 /* 	image next to text on projects page	 */
-	article img {
-	max-width: 55%; 
-	margin: 0 1em;
+		article img {
+			max-width: 55%; 
+			margin-left: 1em;
 	}
-/* 	style accordion */
-	#accordion{  
-	width: 95%; 
-	overflow: hidden;      
-	margin: 0 2.5%;
-}
-	
-	
 /* 	2 col project page fine tunning */
 		.colChange {
 		height: 460px;
 	}
 /* Google form wrapper */
 	.Wrapper {
-		padding-bottom: 235%; 
+		padding-bottom: 225%; 
 			}
 /* Footer font size */
 
@@ -892,7 +885,7 @@ footer p {
 }
 
 
-/* mobile portrait to mobile landscape ******************************************************/
+/* mobile portrait to mobile landscape */
 @media only screen and (max-width: 479px) {
 	body { font-size: 90%; }
 	 
@@ -906,13 +899,12 @@ section {
 header h2 {
 	font-size: 115%;
 	margin-left: 26%;
-	padding: .55em 0;
 }
 
 /* width of mobile menu 25% and 95% of 25 */
 #mobilemenu {
 position: absolute;
-top: 0px;
+top: 2px;
 width: 25%;
 }
 	#mobilemenu ul li {
@@ -922,7 +914,7 @@ width: 25%;
 
 
 	#mobilemenu ul li a {
-	font-size: 80%;	
+	font-size: 60%;	
 	}
 
 	 	th, td {
@@ -934,15 +926,15 @@ width: 25%;
 		tbody td:first-child {
 		display: none; 
 		}	
-#myparallaxslider { /* CSS for specific carousel container called #myparallaxslider. */
+/* CSS for specific carousel container called #myparallaxslider. smaller to fit phone screen */
+#myparallaxslider { 
 width:100%;
 height:500px;
 
 }
 /* 	image above text and full width on project page in mobile device view			 */
 	article img {
-			max-width: 100%; 
-			margin: 0;
+			max-width: 95%; 
 	}
 	/* 	2 col project page fine tunning */
 		.colChange {
@@ -952,10 +944,6 @@ height:500px;
 	.Wrapper {
 		padding-bottom: 325%; 
 			}
-/* 	placement of p element next to image slide on contact page */
-		#moveright {
-		margin-left: 4.6em;
-	}
 
 	
 		footer p {
