@@ -846,7 +846,7 @@ margin-left: 0;
 /* 	resize Image to edge on mobile device*/
 	main img { 
 	margin: 2.5% 0 1.5em 0;
-	max-width: 95%; 
+	max-width: 100%; 
 	}
 	
 	/* make link email me bigger on small  touch screen  and blue to show link*/	
