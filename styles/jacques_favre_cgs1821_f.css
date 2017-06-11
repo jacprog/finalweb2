@@ -934,7 +934,7 @@ height:500px;
 }
 /* 	image above text and full width on project page in mobile device view			 */
 	article img {
-			max-width: 95%; 
+			max-width: 100%; 
 	}
 	/* 	2 col project page fine tunning */
 		.colChange {
