@@ -1,0 +1,953 @@
+/*
+	Name: Jacques Favre
+    Date: Mar 23 2017
+    Class: CGS1821.051
+    Assignment: Week 7 
+    Language: HTML 5
+    Purpose: Project3
+    Adding JavaScript and Jquery function
+    Includes: 
+	
+	color: #dce2ea; accent on table
+	color: #eff2f5;  light blue background
+	color: #282828;  very dark gray
+	color: #030303; almost black
+	color: #3d3d3d	: dark grey links when hoover
+	color: #e6e6e6: sides
+	
+*/
+/* reset selector */
+* {
+	margin: 0;
+	padding: 0;
+	}
+
+
+/* the styles for the elements Verdana for header and table */
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    width: 100%;
+ 	max-width: 960px;	/*width on desktop */
+	margin: 0 auto; /* margin top and bottom 0, and automatic on side, 30px make it centerd*/
+	background-color: #dce2ea;  /*all body light blue*/
+	}
+	
+ /* to make sides grey */
+html {
+	background-color: #e6e6e6 ; 
+	background-image: url("../images/sky.jpg");
+
+	}
+/* almost black header */
+ header {
+		background-color: #282828;
+	} 
+
+
+/*the style for the h2 within the header*/
+	header h2 {
+/* 			float: right; */
+			font-size: 200%;
+			color: #dce2ea; /*90% light blue*/
+			padding: .3em 0 .5em 0;
+			max-width: 70%; 
+			margin: 0 0 0 25%;
+			vertical-align: middle;
+			background-color: #282828;
+
+
+	}
+	/* header link same color, syle*/
+	header a {								
+		text-decoration: none;
+		color: #dce2ea;; 
+	}
+
+/* MENU******************************************************************************** */
+/* the styles for the horizontal navigation menu in desktop mode, mobile menu i */
+
+
+
+ #nav_menu {
+		
+/* 		margin: 1em 0 0 0;   */
+/* 		width: 30% ; */
+	}
+/* style to float each menu item(the list in html) to the right of each other */
+	#nav_menu ul {
+		clear: right;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		position: relative;
+			}
+	
+/*this give the width of menu, 25% of page 4*25 = 100%
+Float left to have the menu on the left side of page*/	
+	#nav_menu ul li {
+		float: left;
+		width: 25%;   
+
+
+	}
+/* 	style of the links in the menu, position and z index to lift menu above slideshow*/
+/* padding for height, color and size of text */
+	#nav_menu ul li a {
+		
+		display: block;
+		text-align: center;
+		padding: 1em 0;
+		text-decoration: none;
+		background-color: #282828;   	/*backgroud menu almost black  */
+/* 		background-color: red;				 */
+		color: #dce2ea; /* text link color*/
+		font-weight: bold;
+		font-size: 80%;
+		position: relative; 
+		z-index: 999;
+	}
+
+/* second level navigation menu */
+
+	#nav_menu ul ul { 
+	display: none;
+	position: absolute;
+	top: 100%;
+	}
+	/* second level navigation menu, to drop down*/
+	#nav_menu ul ul li {
+		float: none;
+	}
+	
+	/* 	 get the second level menu to display when hovering-Projects*/
+	#nav_menu ul li:hover  >  ul {
+	display: block;
+	width: 100%;
+	}
+	 
+	
+	#nav_menu ul li a:hover {
+	background-color: #030303; /*almost black when hover*/
+	}
+	
+	/*Hide project list on desktop view, but allow it on tablet and phone see media query*/
+		#projects { 
+	display: none;
+	}
+	
+/* 	Hide mobile menu div */
+	 #mobilemenu {
+		display:none;
+	}
+	
+	
+/* Main********************************************************************* */
+/* the styles for the main section */
+main {
+	clear: left;
+	font-family: Arial, Helvetica;
+	width: 95%; /* (525/800)*100 = 65.625% minus 5% for margins back to full width for now , no aside*/ 
+	min-height: 400px;
+	padding: 0 2.5% 0 2.5%; /* (20/800)*100 = 2.5%*/
+	background-color: #eff2f5;  /*light blue to tone down back ground instead of white*/
+
+		}
+#black {
+	background-color: black
+}
+
+
+/* 	Image */
+	main img { 
+	margin: 2.5% 0 0 0%;
+/* 	border: 1px solid #7e7e7e;
+	border-radius: 5px; */
+	max-width: 100%; 
+	}	
+/* 	position of caption below slide show */
+	#adv-custom-caption {
+	padding-top: 5px;
+	margin-left: 2.5%;
+}
+
+/* PARALLAX***************************************************************************** */
+
+#myparallaxslider { /* CSS for specific carousel container called #myparallaxslider. */
+width:105.25%;
+height:550px;
+margin-left: -2.6%;
+}
+
+/* ######### Shared CSS for various parts of slider (in the event of multiple sliders) ######### */
+
+div.parallaxslider{ /* shared CSS for main carousel container */
+background: black url(../icon/ajaxload.gif) center center no-repeat; /* loading gif while caoursel is loading */
+}
+
+div.parallaxslider img.navbutton{ /* CSS for the nav buttons */
+}
+
+div.parallaxslider *{
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+div.parallaxslider div.slide{
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+display: none;
+}
+
+div.parallaxslider div.slide div.bgoverlay{ /* CSS for each image's DIV container within main container */
+position: absolute;
+z-index: 0;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+background-color: black;
+background-position: center center; /* center image within carousel */
+background-repeat: no-repeat;
+background-size: cover; /* CSS3 property to scale image within container? "cover" or "contain" */
+}
+
+div.parallaxslider div.selectedslide{ /* CSS for currently selected slide */
+}
+
+div.parallaxslider div.slide div.desc{ /* DIV that contains the textual description inside .slide */
+position: absolute;
+color: grey;    /*color font*/
+padding: 8px;
+text-shadow: 0 -1px 1px #8a8a8a; /* CSS3 text shadow */
+z-index:5;
+}
+
+/* pointer-events: none;  */
+/* keep this property intact. Disable pointer events on desc divs themselves  REMOVED FROM ABOVE*/
+
+/* 
+div.parallaxslider div.slide div.desc *{
+pointer-events: auto; keep this property intact. Enable pointer events on individual elements within desc divs, such as links
+}
+ */
+div.parallaxslider div.selectedslide div.desc{ /* CSS for currently selected slide's desc div */
+}
+
+
+div.parallaxslider div.slide div.desc a{
+color:yellow;
+text-decoration:none;
+}
+
+
+/* 	lightbox dior page */
+
+	 /* thumbnail pics on dior page*/
+	 	#pics1, #pics2, #pics3, #pics4, #pics5 { 
+	 	float: left;
+	 	margin: 2.5% 4.1%;
+	  	max-width: 11.15%; 
+	  	border-radius: 5px;
+	  } 
+	  
+	  /*video on dior page*/
+	video { 
+
+	width: 100%;
+    height: 100%;
+    margin: 2.5% 0%;
+	}
+
+
+/* 	placement of p element next to image slide on contact page */
+		#moveright {
+		margin-left: 4em;
+	}
+	
+	/* slide show CONTACT PAGE*/
+section {
+	width: 80%; 
+	float: right;
+	}
+/* 	width of aside for slideshow */
+			aside {
+		width: 80px;    		float: left;
+		} 
+
+
+#slideshow ul {
+	animation: slideshow 15s infinite alternate;
+}
+@keyframes slideshow {
+    0%		{left:    0%;}
+    10%		{left:    0%;}
+    20%		{left: -100%;}
+    30%		{left: -100%;}
+    40%		{left: -200%;}
+    50%		{left: -200%;}
+    60%		{left: -300%;}
+    70%		{left: -300%;}
+    80%		{left: -400%;}
+    90%		{left: -400%;}
+    100%	{left: -400%;}
+}
+
+#slideshow {
+    overflow:hidden;	
+}
+#slideshow h1 {
+	margin: 0 0 .25em;
+	padding: 0;
+}
+#slideshow ul {
+    list-style: none;
+	width: 500%;
+	margin:0;
+	padding:0;
+    position:relative;
+}
+#slideshow ul li {
+    width: 20%;
+    float: left;
+}
+#slideshow h2 {
+    color: blue;
+	font-size: 100%;
+}
+#slideshow img {
+	margin-top: 1.5em;
+	margin-left: 20%;
+	max-width: 60%;
+	height: auto;	
+	border: none;
+	border-radius: 1px;
+	float: none;
+}
+
+	
+	
+	
+/* 	Blend links on desktop view, the change in cursor will reveal links, turned back to blue on tablet and mobile device, see media query */
+	main a {
+	text-decoration: none;
+	color: #202020;/* color text link, do I need a dark blue*/
+	}
+	
+	
+	/*the style for the h1 within the main always 2.5% of screen size padding on both sides, regardless os screen size*/
+	main h1{
+	font-size: 180%;
+	padding:  1em 2.5%;
+	margin: 0;
+	}
+	
+		/*the style for the h2 to make smaller within the main */
+	main h2 {
+	font-size: 170%;
+	padding: .5em 2.5%; /*top right bottom left   */
+	}
+	
+	main h3 {
+	font-size: 130%;
+	padding: .5em 2.5%;
+	}
+
+	
+	main p {
+		font-size: 120%;
+		padding:  .5em 2.5%;
+	}
+	
+
+
+/* h2 goes under phone image on conatct page	 */
+	#contact {
+		clear: left
+	}
+	
+	
+
+	
+/* list on contacyt page */
+	main ul {
+	padding: 0 0 .25em 3.5em;
+	}
+	
+	main li { 
+	padding-bottom: .35em;
+	font-size: 120%;
+	}
+	
+/* 	style for term and privacy page ol li ol*/
+	main ol {
+		padding: 0 0 .25em 2.5em;
+		font-size: 120%;
+	}
+	
+	main ol li {
+		font-size: 100%;
+	}
+	
+main ol li ol {
+		font-size: 100%;
+	}
+
+	main ul ul li { padding-top: .35em;} 
+
+	/* for the link to blend in the list of contact page */	
+	#nopadding {
+		padding: 0;
+	}
+
+/* image on projects page, full width of each column */
+		article img {
+			max-width: 95%; 
+			margin: 2.5% 2.5% 2.5% 2.5%;
+	}		
+
+	
+		
+/* style for table */
+	figure, figcaption {
+	margin: 0;
+	padding: 0;
+	}
+/* style for table title*/
+	figcaption {
+	display: block;
+	font-weight: bold;
+	font-size: 120%;
+	text-align: center;
+	padding: 1em 0 1.5em 0;
+	}
+/* style for table itself, margin auto to center table on page, 0 on top, 2em bottom*/
+	table {
+	margin: 0 auto 2em;
+	font-family: Verdana;
+	font-size: 110%;
+	}
+/* padding for all cells */
+	th, td {
+	padding: .3em 1.5em .3em 1.5em;
+	}
+
+	
+/* style for table head, color, position to left */
+	thead {
+	color: gray; 
+	text-align: left; 
+	}
+	
+/* style for stripes in table, first and odd, to get ligne 3 and 5  do i need first? */
+	tbody tr:first-child {
+	background-color: #dce2ea; 	
+	}
+	tbody tr:nth-child(odd) {
+	background-color: #dce2ea; 	
+	}
+	
+/* style for bold font in table body */
+	.bolder { 
+	font-weight: bold;
+	}
+	
+	/* the styles for the table footer text, centered*/	 	
+	tfoot { 
+	text-align: center;
+	}
+
+	/* 2 column on for article on projects page in dektop view only, fixed width*/
+	
+	#article2col {
+		-moz-column-count: 2;
+		-webkit-column-count: 2;
+		column-count: 2;
+	}
+	.colChange {
+		height: 676px;
+	}
+	
+/* 	added some padding above to align right and left colum on projects page, compensate for shorter p text	 */
+/* 	#jacques {
+		padding: 1.25em 2.5% .5em 2.5%;
+	} */
+	
+	.colChange:hover {
+		background: #dce2ea;
+		border-radius: 10px;
+
+	}
+	
+/* 	Form formatting */
+#form { clear: right;}
+.centerMe {
+	text-align: center;
+}
+/* 	to align label, inputs, text area 3 sets of format */
+	form label {
+	float: left;
+	width: 5em;
+	text-align: right;
+	}
+	form input, textarea { 
+	margin-left: 1em;
+/* 	margin-bottom: .5em;
+	margin-top: .5em; */
+	border-radius: 5px;
+	}
+	
+	
+	
+/* 	form input, option {
+	margin-left: 1em;
+	margin-top: .5em;
+	margin-bottom: .5em;
+	} */
+		
+/* 	space between fieldset and center	 */
+	fieldset { 
+	margin: 0 2.5%1em 2.5%;
+	padding: 2%;
+	border-radius: 10px;
+	}
+	
+/* 	to help align radio button */
+	#hide1, #hide2, #hide3 {
+		color: #eff2f5;
+	}
+	
+/* 	to expand the how did you learn... */
+	.long {
+		width: 14em;
+		text-align: left;
+		margin-left: .25em;
+}
+
+	
+	/* submit button style, adjusted to be link to other page */
+#joinFormInfo {
+	text-align: center;
+	font-size: 110%;
+	background-color: #282828;
+	color: white;
+	padding: .25em .7em .25em .7em;
+	margin-top: 1.5em;
+	margin-right: auto;
+	margin-left: auto;
+
+	
+}
+
+/* submit button position, had to add this class to work, would not work with id */
+div.button {
+	text-align: center;
+	margin-top: 1em;
+} 
+/* reset button style */
+#reset {
+	font-size: 90%;
+	background-color: #282828;
+	color: white;
+	padding: .25em .5em;
+	margin-bottom: 1em;
+}
+
+/* SLIDER */
+
+#wrapperslide {
+	width: 85%;
+	margin-left: auto;
+	margin-right: auto;
+}
+/* slider is 100% of 85% */
+#sliderVisual {
+	width: 100%;
+}
+#rating {
+	border: 0;
+	color: #1A1DE3;
+	font-weight: bold;
+	margin-bottom: 1em;
+	margin-top: 0;
+}
+/* intro text for rating for slider smaller than p 120% */
+#smaller {
+	font-size: 100%;
+}
+
+
+/* the styles for the google Form to make it responsive*/		
+/* the full width */
+/* the wrapper, how the box will suround the video*/	
+	.Wrapper {
+		position: relative;
+		padding-bottom: 130%; 
+		padding-top: 25px;
+		margin-bottom: 1%;
+		height: 0;
+	}
+	
+/* the styles for the iframe, position and size of video*/	
+	
+	.Wrapper iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+ 		width: 100%;     /*Video 100% of main who is 90% of page */
+		height: 100%;
+	}
+/*  it/jacques page *********************************************************************/
+	
+	/* 	Style for the accordion */
+
+/* color change on title on hover */
+.accordion-title.active .accordion-title:hover {     
+	background: #4c4c4c;  /* dark grey*/
+	   /* Type */    
+	 text-decoration: none; 
+}
+/* Position and width of accordion,margin is in main */
+#accordion{  
+	width: 95%; 
+	overflow: hidden;      
+	box-shadow: 0px 1px 3px #000000;      
+	border-radius: 5px; 
+	margin: 0 2.5%;
+
+}
+/* style for content, text box displayed */
+	.ui-accordion .ui-accordion-content {  
+ 	background: #f5f2ef;		/*light gray	 */
+	font-family: Arial;
+	}
+	
+/* 	.accordion-title.active {
+		background: #f5f2ef;
+	} */
+	
+/* 	color text header open */
+/* 	.ui-state-active, .ui-state-focus {
+		border: 1px solid black;
+		color: 3282828;
+	} */
+
+/* color of title boxes at idle same as sides */
+	.ui-accordion .ui-accordion-header {
+/* 		background: #dce2ea;  */
+	background: #e6e6e6; 
+} 
+
+
+/* color of title box when clicked and color of text when open*/
+.ui-accordion .ui-accordion-header-active {
+	background: #3d3d3d;
+	color: white;
+	border: 1px solid white;
+	border-radius: 5px;
+}
+
+#oneem {
+	height: 1em; 
+	}	
+	
+/* the style for the footer*/
+footer {
+	background-color: #282828;  /* to make footer almost black */
+	clear: both;
+	clear: left;
+}	
+
+/* the style for the footer text*/
+footer p {
+	text-align: center;
+	color: #dce2ea; 	/*text light blue*/
+	padding: 1em 0;
+}
+/* the style for privacy link in footer */
+footer p a {
+	color: #dce2ea; 
+}
+/* ********************************************************************************************** */
+/* ********************************************************************************************** */
+
+/* Media Query for tablet view*/
+
+
+/* no mobile menu in desktop and tablet landscape view */
+/* .slicknav_menu {
+	display: none;
+} */
+
+/* tablet landscape to standard 960 */
+@media only screen and (max-width: 959px) {
+	section h1 { font-size: 135%; }
+	section h2, aside h2 { font-size: 120%; }
+	
+	/* 	Hide mobile menu div */
+/*  #mobilemenu {
+		display:none;
+	} */
+
+
+/* do not display projects list on desktop view, will show in mobile view */
+	#projects { 
+	display: none;
+	}
+
+/* only 1 column on smaller screen, tablet and molie devices */
+	#article2col {
+		-moz-column-count: 1;
+		-webkit-column-count: 1;
+		column-count: 1;
+	}
+
+	/* 	removed the extra padding above to align right and left colum	 */
+	#jacques {
+		padding: .5em 2.5%;
+	}
+	
+	.colChange {
+		height: 380px;
+	}
+	
+	/* Google form wrapper */
+	.Wrapper {
+		padding-bottom: 325%; 
+			}
+
+	
+/* 	to display image next to text on projects page on tablet view */
+	article img {
+			max-width: 50%; 
+			float: right;
+			margin: 0 0 0 1em;
+	}
+	
+/* 	to improve position of pictures next to the text on projects page on tablet view*/
+	article h2 { 
+	clear: right;
+	} 
+}  
+
+/* mobile landscape to tablet portrait */
+@media only screen and (max-width: 769px) {
+
+
+/* MENU CHANGE	 */
+/* 	switch off horizontal menu */
+
+
+header h2 { 
+font-size: 150%;
+margin-left: 27%;
+z-index: 9999;
+}
+
+
+	#nav_menu {
+		display: none;
+	}
+/* 	and swittch on mobile menu  */	
+	#mobilemenu {
+		display: block;
+/* 		height: .5em; */
+		position: absolute;
+		top: 10px;
+		width: 25%;     /*more will cover link header*/
+	}
+/* and reformat mobile menu */
+
+
+
+/* style to float each menu item(the list in html) to the right of each other */
+	#mobilemenu ul {
+		clear: right;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		position: relative;
+			}
+	
+/*this give the width of menu, 25% of page 4*25 = 100%
+Float left to have the menu on the left side of page*/	
+	#mobilemenu ul li {
+		float: left;
+		width: 95%;   
+	}
+/* 	style of the links in the menu, position and z index to lift menu above slideshow*/
+/* padding for height, color and size of text */
+	#mobilemenu ul li a {
+		display: block;
+		text-align: center;
+		padding: 1em 0;
+		text-decoration: none;
+		background-color: #292929;   /*	backgroud menu almost black  */
+/* 		background-color: red;				 */
+		color: #dce2ea; /* text link color*/
+		font-weight: bold;
+		font-size: 70%;
+		position: relative; 
+		z-index: 999;
+	}
+
+/* second level navigation menu */
+
+	#mobilemenu ul ul { 
+	display: none;
+	position: absolute;
+	top: 100%;
+	}
+	/* second level navigation menu, to drop down*/
+	#mobilemenu ul ul li {
+		float: none;
+	}
+	
+	/* 	 get the second level menu to display when hovering-Projects*/
+	#mobilemenu ul li:hover  >  ul {
+	display: block;
+	width: 100%;
+	}
+	 
+	
+	#mobilemenu ul li a:hover {
+	background-color: #030303; /*almost black when hover*/
+	}
+	
+/* move stuff from under mobilemenu pon CV page*/
+#recenter {
+	margin-left: 60%;
+}
+ h1 {
+	text-align: center;
+}
+
+#top {
+	text-align: center;
+}
+
+/* index style */
+#myparallaxslider { /* CSS for specific carousel container called #myparallaxslider. */
+width:100%;
+height:600px;
+margin-left: 0;
+}
+	
+	
+/* 	main style no border */
+	main {
+	width: 100%; /* (525/800)*100 = 65.625% minus 5% for margins back to full width for now , no aside*/ 
+	padding: 0 0 0 0; /* (20/800)*100 = 2.5%*/
+}	
+/* 	resize Image to edge on mobile device*/
+	main img { 
+	margin: 2.5% 0 1.5em 0;
+	max-width: 100%; 
+	}
+	
+	/* make link email me bigger on small  touch screen  and blue to show link*/	
+	main a { 
+	font-size: 125%; 
+	color: blue;
+	} 
+	
+	/* Shrink table on smaller screen*/
+	table {
+	font-size: 90%;
+	}
+	th, td {
+	padding: .3em .75em .3em .75em;
+	}
+	
+/* 	image next to text on projects page	 */
+		article img {
+			max-width: 55%; 
+			margin-left: 1em;
+	}
+/* 	2 col project page fine tunning */
+		.colChange {
+		height: 460px;
+	}
+/* Google form wrapper */
+	.Wrapper {
+		padding-bottom: 225%; 
+			}
+/* Footer font size */
+
+footer p {
+	font-size: 80%;
+}
+
+}
+
+
+/* mobile portrait to mobile landscape */
+@media only screen and (max-width: 479px) {
+	body { font-size: 90%; }
+	 
+	 	 /* adjust table size and hide first column on table project page on portrait view, still there on landscape view*/
+
+section {
+	width: 100%;
+	}
+
+/* Adjustementy for header and mobilemenu */
+header h2 {
+	font-size: 115%;
+	margin-left: 26%;
+}
+
+/* width of mobile menu 25% and 95% of 25 */
+#mobilemenu {
+position: absolute;
+top: 2px;
+width: 25%;
+}
+	#mobilemenu ul li {
+		float: left;
+		width: 95%;   
+	}
+
+
+	#mobilemenu ul li a {
+	font-size: 60%;	
+	}
+
+	 	th, td {
+		padding: .3em .5em .3em .5em;
+		}
+		th:first-child {
+		display: none; 
+		}
+		tbody td:first-child {
+		display: none; 
+		}	
+/* CSS for specific carousel container called #myparallaxslider. smaller to fit phone screen */
+#myparallaxslider { 
+width:100%;
+height:500px;
+
+}
+/* 	image above text and full width on project page in mobile device view			 */
+	article img {
+			max-width: 100%; 
+	}
+	/* 	2 col project page fine tunning */
+		.colChange {
+		height: 650px;
+	}
+/* Google form wrapper */
+	.Wrapper {
+		padding-bottom: 325%; 
+			}
+
+	
+		footer p {
+font-size: 70%;
+}	
+} 	
+
