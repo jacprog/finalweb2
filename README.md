@@ -1,4 +1,4 @@
-# finalweb2
+# Portfolio 2017
 final project web auth 2.
 
 This is my web portfolio showing things that I have done as well of web design skills,
